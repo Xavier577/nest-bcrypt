@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { BCRYPT_MODULE_OPTIONS } from 'src/symbols';
+import { BCRYPT_MODULE_OPTIONS } from './symbols';
 import { BcryptModuleOptions, BcryptSalt } from './types';
 import * as bcrypt from 'bcrypt';
 
