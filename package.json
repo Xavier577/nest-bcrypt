@@ -1,10 +1,26 @@
 {
   "name": "nest-bcrypt",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A bcrypt module build for nestjs",
-  "author": "Joseph Tsegen",
   "private": false,
   "license": "MIT",
+  "repository": "https://github.com/Xavier577/nest-bcrypt.git",
+  "author": "joseph <josephtsegen10@gmail.com>",
+  "main": "dist/index",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "bcrypt",
+    "nestjs",
+    "hashing",
+    "typescript"
+  ],
+  "bugs": {
+    "url": "https://github.com/Xavier577/nest-bcrypt/issues"
+  },
+  "homepage": "https://github.com/Xavier577/nest-bcrypt#readme",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "rm -rf dist && tsc -p tsconfig.json",
@@ -20,15 +36,16 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "bcrypt": "^5.1.0",
-    "@types/bcrypt": "^5.0.0"
+    "@nestjs/common": "^9.2.1",
+    "@types/bcrypt": "^5.0.0",
+    "bcrypt": "^5.1.0"
   },
   "peerDependencies": {
+    "@nestjs/common": "^8.0.0",
+    "@nestjs/core": "^8.0.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^7.2.0",
-    "@nestjs/common": "^8.0.0",
-    "@nestjs/core": "^8.0.0"
+    "rxjs": "^7.2.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^8.0.0",
