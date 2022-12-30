@@ -32,6 +32,42 @@ Bcrypt Module for [Nest](https://github.com/nestjs/nest).
 $ npm install nest-bcrypt
 ```
 
+## Usage
+
+### Injecting the BcryptModule
+
+```
+import { Module } from '@nestjs/common';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+import { BcryptModule } from 'nest-bcrypt';
+
+@Module({
+  imports: [BcryptModule.register({ salt: 10 })],
+  controllers: [AppController],
+  providers: [AppService],
+})
+export class AppModule {}
+
+```
+
+### Using the BcryptService
+
+```
+import { Injectable } from '@nestjs/common';
+import { BcryptService } from 'nest-bcrypt';
+
+@Injectable()
+export class AppService {
+  constructor(private readonly bcryptService: BcryptService) {}
+
+  public async hashData(data: string) {
+    return this.bcryptService.hash(data, 10);
+  }
+}
+
+```
+
 ## Stay in touch
 
 - Author - [Joseph Tsegen](https://github.com/Xavier577)
