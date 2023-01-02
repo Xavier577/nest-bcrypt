@@ -1,6 +1,6 @@
 {
   "name": "nest-bcrypt",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A bcrypt module build for nestjs",
   "private": false,
   "license": "MIT",
@@ -14,6 +14,9 @@
   "keywords": [
     "bcrypt",
     "nestjs",
+    "nest-bcrypt",
+    "nest",
+    "bcrpt-nest",
     "hashing",
     "typescript"
   ],

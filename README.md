@@ -62,7 +62,8 @@ export class AppService {
   constructor(private readonly bcryptService: BcryptService) {}
 
   public async hashData(data: string) {
-    return this.bcryptService.hash(data, 10);
+    // return this.bcryptService.hash(data, _customSalt) // to use a custom salt different from that set
+    return this.bcryptService.hash(data);
   }
 }
 
